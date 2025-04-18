@@ -1,0 +1,40 @@
+{
+  "name": "Kenya",
+  "flag": "🇰🇪",
+  "summary": {
+    "population": "54.9M",
+    "region": "East Africa",
+    "undernourished": "23%",
+    "agLand": "48.5%",
+    "gdpPerCapita": "$2,007",
+    "climateRisk": "High"
+  },
+  "themes": {
+    "production": {
+      "headline": "42% of workforce in agriculture",
+      "topCrops": ["Maize", "Tea", "Sugarcane"],
+      "output": "44.7M tonnes",
+      "growth": "+2.3%"
+    },
+    "consumption": {
+      "calories": "2,206",
+      "staples": "68%",
+      "protein": "58g"
+    },
+    "trade": {
+      "balance": "-$2.1B",
+      "exports": "$3.2B",
+      "imports": "$5.3B"
+    },
+    "nutrition": {
+      "stunting": "26.2%",
+      "wasting": "4.1%",
+      "obesity": "6.3%"
+    },
+    "climate": {
+      "emissions": "18.6 MT",
+      "drought": "High",
+      "adaptation": "Medium"
+    }
+  }
+}

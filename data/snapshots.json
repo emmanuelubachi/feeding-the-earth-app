@@ -1,0 +1,19 @@
+{
+  "snapshots": [
+    {
+      "stat": "2.37B",
+      "label": "Metric tons of cereals produced globally in 2022",
+      "source": "FAO"
+    },
+    {
+      "stat": "828M",
+      "label": "People affected by hunger worldwide",
+      "source": "World Food Programme"
+    },
+    {
+      "stat": "31%",
+      "label": "Of global emissions linked to food systems",
+      "source": "UN FAO"
+    }
+  ]
+}

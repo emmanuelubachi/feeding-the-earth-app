@@ -29,11 +29,11 @@ const fadeIn = {
   transition: { duration: 0.6 },
 };
 
-const slideIn = {
-  initial: { opacity: 0, x: -20 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.5 },
-};
+// const slideIn = {
+//   initial: { opacity: 0, x: -20 },
+//   animate: { opacity: 1, x: 0 },
+//   transition: { duration: 0.5 },
+// };
 
 // const themes = [
 //   {
@@ -177,7 +177,7 @@ interface HomePageProps {
   regions: Region[];
   insights: Insight[];
   snapshots: Snapshot[];
-  config: Config;
+  config?: Config;
 }
 
 export default function HomePage({
@@ -185,7 +185,6 @@ export default function HomePage({
   regions,
   insights,
   snapshots,
-  config,
 }: HomePageProps) {
   return (
     <div className="min-h-screen">

@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo } from "react";
 import Map, { Source, Layer, NavigationControl } from "react-map-gl";
-import type { LayerProps } from "react-map-gl";
+import type { LayerProps, MapLayerMouseEvent } from "react-map-gl";
 import { motion } from "framer-motion";
 
 interface MapComponentProps {
@@ -10,8 +10,10 @@ interface MapComponentProps {
   activeLayer: string;
 }
 
+import type { FeatureCollection, Geometry, GeoJsonProperties } from "geojson";
+
 // This would normally come from a GeoJSON file
-const mockGeoJSON = {
+const mockGeoJSON: FeatureCollection<Geometry, GeoJsonProperties> = {
   type: "FeatureCollection",
   features: [
     {
@@ -78,9 +80,9 @@ export default function MapComponent({
   activeLayer,
 }: MapComponentProps) {
   const onClick = useCallback(
-    (event: any) => {
+    (event: MapLayerMouseEvent) => {
       const feature = event.features?.[0];
-      if (feature) {
+      if (feature && feature.properties) {
         onCountryClick(feature.properties.name);
       }
     },
@@ -104,7 +106,7 @@ export default function MapComponent({
         }}
         mapStyle="mapbox://styles/mapbox/light-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
-        interactiveLayerIds={[layerStyle.id]}
+        interactiveLayerIds={[layerStyle.id ?? ""]}
         onClick={onClick}
       >
         <NavigationControl />
